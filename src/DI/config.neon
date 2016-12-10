@@ -1,0 +1,21 @@
+parameters:
+	PrivateModule:
+		AddButtons:
+			## This name must be same as name of injected service in Wunderman\CMS\YoutubeVideo for composedPagePresenter (@privateModuleService in this config)
+			youtubeVideo:
+				text: 'Add youtube video'
+				tooltip: ''
+	renderableComponents:
+		youtubeVideo:
+
+services:
+	privateModuleService:
+	 	class: Wunderman\CMS\YoutubeVideo\PrivateModule\Service\YoutubeVideoService
+
+	publicYoutubeVideoFactory:
+		class: Wunderman\CMS\YoutubeVideo\PublicModule\Components\YoutubeVideo\YoutubeVideo
+		implement: Wunderman\CMS\YoutubeVideo\PublicModule\Components\YoutubeVideo\IYoutubeVideoFactory
+
+	privateYoutubeVideoFactory:
+		class: Wunderman\CMS\YoutubeVideo\PrivateModule\Components\YoutubeVideo\YoutubeVideo
+		implement: Wunderman\CMS\YoutubeVideo\PrivateModule\Components\YoutubeVideo\IYoutubeVideoFactory

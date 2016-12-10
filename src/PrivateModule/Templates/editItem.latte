@@ -1,0 +1,109 @@
+<div class="row" id="YoutubeVideoEditItem">
+	<div class="col-lg-6">
+		<div class="row">
+			<div class="col-lg-6">
+				<strong>YouTube hash</strong> <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="right" title="https://www.youtube.com/watch?v=YoutubeHash"></i>
+			</div>
+			<div class="col-lg-6">
+				{input item-youtubeHash class=>'form-control', placeholder=>'e.g. OEUCRtxJUek'}
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-lg-6">
+				<strong>Play video after page load</strong>
+			</div>
+			<div class="col-lg-6">
+				<input n:name="item-playOnLoad" class="form-control js-switch" data-switchery="true" />
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-lg-6">
+				<strong>Anchor</strong>
+			</div>
+			<div class="col-lg-6">
+				{input item-anchor class=>'form-control', placeholder=>'some-text'}
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-lg-6"><strong>Background image</strong> <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="right" title="Select any image of type jpg, png or gif as background of video."></i></div>
+			<div class="col-lg-6">
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="input-group">
+					{input item-image class=>'form-control'}
+					<span class="input-group-addon bg-danger">
+	                    Remove image <input n:name="item-deleteImage" type="checkbox" aria-label="...">
+					</span>
+				</div>
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-lg-6">
+				<strong>Alternative text</strong>
+			</div>
+			<div class="col-lg-6">
+				{input item-imageAlt class=>'form-control', placeholder=>'some text'}
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-lg-6"><strong>Play button vertical position</strong></div>
+			<div class="col-lg-6">
+				<div class="input-group">
+					<input n:name="item-playButtonVerticalPosition" class="form-control">
+					<span class="input-group-addon">%</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6">
+		{ifset $editedItem}
+			{control componentWrapper-1, $editedItem}
+		{/ifset}
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-lg-12"><strong>Play button horizontal position</strong></div>
+</div>
+<div class="row">
+	<div class="col-lg-1 text-center"><strong>1/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>2/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>3/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>4/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>5/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>6/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>7/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>8/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>9/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>10/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>11/12</strong></div>
+	<div class="col-lg-1 text-center"><strong>12/12</strong></div>
+</div>
+<div class="row">
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:1}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:2}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:3}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:4}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:5}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:6}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:7}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:8}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:9}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:10}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:11}</div>
+	<div class="col-lg-1 text-center">{input item-playButtonPosition:12}</div>
+</div>
+<div class="row">
+	<div class="col-lg-12 text-center"><strong>center</strong></div>
+</div>
+<div class="row">
+	<div class="col-lg-12 text-center">{input item-playButtonPosition:center}</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		{input item-type}
+		{input item-itemId}
+	</div>
+</div>
